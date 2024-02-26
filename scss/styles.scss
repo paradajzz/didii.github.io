@@ -1,0 +1,833 @@
+$crna:black;
+$siva1:	#C0C0C0;
+$zelena:green;
+$siva2:#e8e8e8;
+$progress-sirina:800px;
+$zelenat:#005216;
+
+@mixin flex{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+@mixin font{
+        font-family: "Schoolbell", cursive;
+        font-weight: 400;
+        font-style: normal;
+      
+}
+@mixin pozadina{
+    background-image: linear-gradient(to left, $siva1 , $crna);
+}
+
+
+*{
+    padding:0px;
+    margin:0px;
+    scroll-behavior: smooth;
+    @include font();
+}
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+#top {
+    background-image: linear-gradient(to left, $siva1 , $crna);
+   border-bottom:solid $crna ;
+   @include flex();
+    #logo{
+        padding-left: 6%;
+        
+        a{
+            img{
+        width: 100px;
+        height:100px;
+            }
+        }
+    }
+    
+    nav{
+        @include flex();
+        width:50%;
+        margin-right: 7%;
+        ul{
+          
+           
+            li{
+                
+                
+                
+                
+            display:inline-block;
+           
+            a{
+                
+                color:$crna;
+                font-size: 20px;
+                
+                transition: .5s all;
+                   padding:20px;
+                
+                &:hover{
+                    color:$zelenat;
+                    background-color: $siva1;
+                    border-radius: 50px;
+            }
+        }
+            }
+        }
+    }
+}
+#bot{
+    background-image:url(../img/pozadina.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    max-width:  100%;
+    max-height:100%;
+    
+    @include flex();
+    justify-content: space-around;
+    padding-bottom: 17%;
+    
+    #ime{
+       
+        margin-top: 15%;
+        margin-left:6%;
+        h1{
+            color:$siva1;
+            font-size: 35px;
+            .slovo{
+                color:$zelenat;
+            }
+        }
+        h2{
+            color: $siva1;
+            font-size: 35px;
+            .slovo{
+                color:$zelenat;
+            }
+        }
+        }
+    }
+    #oblak{
+        display:inline-block;
+        margin-top: 15%;
+        margin-left:30%;
+        margin-right: 15%;
+        a{
+            
+            
+            color:$siva1;
+            h2{
+                padding:15px 25px;
+                border:1px solid $siva2;
+                border-radius: 20%;
+                font-size: 30px;
+                transition: .5s all;
+            
+                &:hover{
+                    color:$zelenat;
+                    border:1px solid $zelenat;
+                    background-color: $siva1;
+                }
+            }
+        }
+    }
+
+main{
+    padding-bottom: 8%;
+    background-image: linear-gradient(to right, $siva1 , $crna);
+    .naslov{
+        font-size: 30px;
+        margin-left:46% ;
+        .slovo{
+            color:$zelenat;
+        }
+
+    }
+    .pozicioniranje{
+        @include flex();
+        #info{
+            width:30%;
+            background-color:$siva2;
+            border-radius:20% ;
+            margin-left:5%;
+            p{
+                margin-left:18%;
+                padding:17px 20px;
+                font-size: 25px;
+            }
+            .rec{
+                font-weight: 900;
+                font-size: 25px;
+                color:$zelena;
+            }
+        }
+    }
+    #slika{
+        margin-right:15%;
+        img{
+            width:400px;
+            height:500px;
+            border-radius: 10%;
+        }
+    }
+}
+#servisi{
+    background-image: linear-gradient(to left, $siva1 , $crna);
+    padding-bottom:5%;
+    .naslov{
+        font-size: 30px;
+        margin-left:46% ;
+        .slovo{
+            color:$zelena;
+        }
+    }
+    #drzac{
+        @include flex();
+        
+
+        .stavke{
+            padding:2% 4%;
+            margin:40px 50px;
+            background-color: $siva2;
+            border-radius: 50px;
+            text-align: center;
+            h3{
+                font-weight: 900;
+            }
+            p{
+                @include font();
+            }
+            .fa-solid{
+                font-size: 30px;
+                padding-bottom: 10px;
+                
+
+            }
+            .fa-regular{
+                font-size: 30px;
+                padding-bottom: 10px;
+                
+            }
+        }
+    }
+}    
+#vestine {
+    background-image: linear-gradient(to right, $siva1 , $crna);
+    padding-bottom: 6%;
+        .naslov{
+            font-size: 30px;
+            margin-left:46% ;
+            .slovo{
+                color:$zelenat;
+            }
+        }
+        #drzac2{
+           
+            @include flex();
+            flex-direction: column;
+            
+            .stvari{
+                p{
+                    font-size: 30px;;
+                }
+                progress{
+                    width:$progress-sirina;
+                    height:40px;
+                    padding:4px 5px;
+                    background-color: $zelena;
+                    border-radius: 11px;
+                    margin-bottom: 20px;;
+            }
+            .posto{
+                font-size: 25px;
+                color:$siva2;
+            }
+        }
+    }
+        }
+    
+        #strelica{
+            position:fixed;
+            right:10px;
+            bottom:10px;
+            padding:10px;
+        
+            background-color: $zelenat;
+            border-radius: 60%;
+            a{
+                color: $siva1;
+                padding:10px;
+            }
+        }
+
+#projekti{
+    background-image: linear-gradient(to left, $siva1 , $crna);
+    padding-bottom: 6%;
+    .naslov{
+        font-size: 30px;
+            margin-left:46% ;
+            .slovo{
+                color:$zelenat;
+            }
+    }
+    #drzac3{
+        @include flex();
+        
+        .proj{
+            background-color: $siva2;
+            border-radius: 20px;
+            text-align: center;
+            margin:30px 30px;
+            .slicica{
+               width:400px;
+               height:450px;
+                img{
+                    height:400px;
+                    width:400px;
+                    border-radius: 20px;
+                }
+            }
+            h4{
+                font-size: 27px;
+            }
+        }
+    }
+}
+#kontakt{
+    background-image: linear-gradient(to right, $siva1 , $crna);
+    padding-bottom:6% ;
+    .naslov{
+        font-size: 30px;
+            margin-left:46% ;
+            .slovo{
+                color:$zelenat;
+            }
+    }
+    #drzim{
+        width:60%;
+        margin: 10px auto;
+        text-align: center;
+        form{
+            #ime{
+                width:30%;
+                padding:15px;
+                border-radius: 50px;
+                border:3px solid $zelenat;
+                margin:10px;
+            }
+            #prezime{
+                width:30%;
+                padding:15px;
+                border-radius: 50px;
+                border:3px solid $zelenat;
+                margin:10px;
+            }
+            #email{
+                width:60%;
+                padding:15px;
+                border-radius: 50px;
+                border:3px solid $zelenat;
+                margin:10px;
+            }
+            #poruka{
+                width:60%;
+                padding:20px;
+                border-radius: 50px;
+                border:3px solid $zelenat;
+                margin:10px;
+            }
+            #pos{
+                width:15%;
+                padding:15px;
+                border-radius: 50px;
+                border:3px solid $zelenat;
+                margin:10px;
+                transition: .5s all;
+                &:hover{
+                    color:white;
+                    background-color: #005216;
+                    border:3px solid white;
+                }
+            }
+        }
+    }
+    
+}
+footer{
+    background-color: $siva1;
+    
+    @include flex();
+    .didi{
+        padding:20px;
+        font-size: 20px;
+        margin-left: 50px;
+
+    }
+    .ikonice{
+        font-size: 30px;
+        padding:15px;
+        margin-right:100px;
+        a{
+            color:$zelenat;
+            padding:10px;
+        }
+    }
+}
+
+/*Responsive*/                                                      
+@media screen and (max-width: 1290px) {
+	#projekti {
+		#drzac3 {
+			.proj {
+				.slicica {
+					width: 320px;
+					img {
+						width: 320px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1140px) {
+	#projekti {
+		#drzac3 {
+			.proj {
+				.slicica {
+					width: 280px;
+					height: 370px;
+					img {
+						width: 280px;
+						height: 340px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1243.20px) {
+	#top {
+		nav {
+			width: 58%;
+		}
+	}
+	#oblak {
+		a {
+			h2 {
+				font-size: 20px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1074.40px) {
+	#top {
+		nav {
+			width: 72%;
+		}
+	}
+	#servisi {
+		#drzac {
+			.stavke {
+				margin: 30px 5px;
+			}
+		}
+	}
+	#kontakt {
+		#drzim {
+			width: 90%;
+		}
+	}
+	#vestine {
+		#drzac2 {
+			.stvari {
+				progress {
+					width: 700px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1040px) {
+	#oblak {
+		a {
+			h2 {
+				font-size: 15px;
+			}
+		}
+	}
+	#bot {
+		#ime {
+			h1 {
+				font-size: 25px;
+			}
+			h2 {
+				font-size: 25px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1015px) {
+	main {
+		.pozicioniranje {
+			#info {
+				p {
+					font-size: 17px;
+				}
+				.rec {
+					font-size: 17px;
+				}
+			}
+		}
+		#slika {
+			img {
+				width: 360px;
+				height: 450;
+			}
+		}
+	}
+	#projekti {
+		#drzac3 {
+			flex-direction: column;
+			.proj {
+				.slicica {
+					width: 500px;
+					height: 450px;
+					img {
+						width: 500px;
+						height: 400px;
+					}
+				}
+			}
+		}
+	}
+	#vestine {
+		#drzac2 {
+			.stvari {
+				progress {
+					width: 639px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 869.60px) {
+	#top {
+		nav {
+			width: 80%;
+			margin-right: 0%;
+			ul {
+				li {
+					a {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+		#logo {
+			a {
+				img {
+					width: 60px;
+					height: 60px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 753px) {
+	main {
+		#slika {
+			img {
+				display: none;
+			}
+		}
+		.pozicioniranje {
+			flex-direction: column;
+			#info {
+				width: 45%;
+				p {
+					font-size: 20px;
+				}
+				.rec {
+					font-size: 20px;
+				}
+			}
+		}
+		.naslov {
+			margin-left: 40%;
+		}
+	}
+	#servisi {
+		#drzac {
+			flex-direction: column;
+			.stavke {
+				margin: 30px 100px;
+			}
+		}
+		.naslov {
+			margin-left: 40%;
+		}
+	}
+	#vestine {
+		#drzac2 {
+			.stvari {
+				progress {
+					width: 500px;
+				}
+			}
+		}
+		.naslov {
+			margin-left: 40%;
+		}
+	}
+	#kontakt {
+		.naslov {
+			margin-left: 40%;
+		}
+	}
+	#bot {
+		flex-direction: column;
+		#ime {
+			margin-left: 0%;
+			h1 {
+				font-size: 30px;
+			}
+			h2 {
+				font-size: 30px;
+			}
+		}
+	}
+	#oblak {
+		margin-left: 0%;
+		margin-right: 0%;
+		a {
+			h2 {
+				font-size: 20px;
+			}
+		}
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+		align-items: stretch;
+	}
+	#projekti {
+		#drzac3 {
+			.proj {
+				.slicica {
+					width: 400px;
+					height: 400px;
+					img {
+						width: 400px;
+						height: 360px;
+					}
+				}
+			}
+		}
+		.naslov {
+			margin-left: 40%;
+		}
+	}
+	#top {
+		nav {
+			ul {
+				li {
+					a {
+						padding: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 605px) {
+	main {
+		.pozicioniranje {
+			#info {
+				p {
+					padding: 0%;
+				}
+			}
+		}
+	}
+	#vestine {
+		#drzac2 {
+			.stvari {
+				progress {
+					width: 316px;
+					height: 25px;
+				}
+				p {
+					font-size: 20px;
+				}
+				.posto {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+	footer {
+		.didi {
+			font-size: 15px;
+		}
+		.ikonice {
+			font-size: 19px;
+		}
+	}
+	#kontakt {
+		#drzim {
+			width: 69%;
+		}
+	}
+	#projekti {
+		#drzac3 {
+			.proj {
+				.slicica {
+					width: 350px;
+					height: 350px;
+					img {
+						width: 350px;
+						height: 325px;
+					}
+				}
+				h4 {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 516px) {
+	#kontakt {
+		#drzim {
+			form {
+				#pos {
+					width: 20%;
+					padding: 5px;
+				}
+			}
+		}
+		.naslov {
+			font-size: 20px;
+		}
+	}
+	footer {
+		.didi {
+			padding: 5px;
+			font-size: 13px;
+		}
+		.ikonice {
+			padding: 0px;
+			font-size: 15px;
+		}
+	}
+	#bot {
+		#ime {
+			h2 {
+				font-size: 25px;
+			}
+			h1 {
+				font-size: 25px;
+			}
+		}
+	}
+	#oblak {
+		a {
+			h2 {
+				font-size: 15px;
+				padding: 7px 14px;
+			}
+		}
+	}
+	main {
+		.naslov {
+			font-size: 20px;
+		}
+	}
+	#servisi {
+		.naslov {
+			font-size: 20px;
+		}
+	}
+	#vestine {
+		.naslov {
+			font-size: 20px;
+		}
+	}
+	#projekti {
+		.naslov {
+			font-size: 20px;
+		}
+	}
+	#top {
+		nav {
+			ul {
+				li {
+					margin: 3px 0px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 422.40px) {
+	footer {
+		flex-direction: column;
+		.didi {
+			margin-left: 0px;
+		}
+		.ikonice {
+			margin-right: 0px;
+		}
+	}
+}
+@media screen and (max-width: 390px) {
+	#oblak {
+		display: none;
+	}
+	main {
+		.pozicioniranje {
+			#info {
+				.rec {
+					font-size: 13px;
+				}
+				p {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+	#top {
+		flex-direction: column;
+	}
+	#vestine {
+		#drzac2 {
+			.stvari {
+				progress {
+					width: 300px;
+				}
+			}
+		}
+	}
+	#projekti {
+		#drzac3 {
+			.proj {
+				.slicica {
+					width: 300px;                          
+					height: 300px;  
+					img {
+						width: 300px;
+						height: 290px;
+					}
+				}
+			}
+		}
+	}
+}                                                   
