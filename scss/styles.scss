@@ -706,6 +706,9 @@ footer{
 	}
 }
 @media screen and (max-width: 516px) {
+	#top {
+		flex-direction: column;
+	}
 	#kontakt {
 		#drzim {
 			form {
