@@ -555,6 +555,9 @@ footer .ikonice a {
     width: 20%;
     padding: 5px;
   }
+  #top {
+    flex-direction: column;
+  }
   #kontakt .naslov {
     font-size: 20px;
   }
